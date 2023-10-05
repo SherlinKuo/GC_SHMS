@@ -27,12 +27,14 @@ export class CreateDepositaryComponent implements OnInit {
     MainSchool: new FormControl(),
     VendorStore: new FormControl(),
     PayMethod: new FormControl(),
+    OrderID: new FormControl(),
   });
 
   schoolList?: selectList[];
   vendorList!: selectList[];
   statusList!: selectList[];
   payMethodList!: selectList[];
+  orderIDList!: selectList[];
 
   addItemData?: DepositaryDataTable;
   constructor(
@@ -60,6 +62,7 @@ export class CreateDepositaryComponent implements OnInit {
       this.vendorList = data.Data.vendorList;
       this.statusList = data.Data.statusList;
       this.payMethodList = data.Data.payMethodList;
+      this.orderIDList = data.Data.orderIDList;
     });
   }
 

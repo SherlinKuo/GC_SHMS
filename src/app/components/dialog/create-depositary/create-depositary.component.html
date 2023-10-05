@@ -8,7 +8,7 @@
   [formGroup]="dataForm"
 >
 
-<div  fxLayout="row" fxLayoutAlign="space-between center" class="oneline-input-width">
+<div fxFill  fxLayout="row" fxLayoutAlign="space-around center">
 <ng-container>
     <ng-select formControlName="VendorStore" appearance="outline" required  placeholder="廠商" notFoundText="查無此廠商" class="row-input-width">
       <ng-option *ngFor="let item of vendorList" [value]="item.value">
@@ -49,7 +49,14 @@
 
 
 </div>
-<div  fxLayout="row" fxLayoutAlign="space-between center" class="oneline-input-width">
+<div fxFill fxLayout="row" fxLayoutAlign="space-around center" >
+  <ng-container>
+    <ng-select formControlName="OrderID" appearance="outline" required  placeholder="訂單編號" notFoundText="查無此廠商" class="row-input-width">
+      <ng-option *ngFor="let item of orderIDList" [value]="item.value">
+        {{ item.display }}
+      </ng-option>
+    </ng-select>
+  </ng-container>
   <ng-container>
     <mat-form-field appearance="outline" class="row-input-width">
       <mat-label>叫貨日</mat-label>
@@ -96,14 +103,15 @@
 
 </div>
 
-  <ng-container>
-    <mat-form-field  appearance="outline" class="oneline-input-width">
-      <mat-label>項目</mat-label>
-      <input matInput formControlName="ItemName" required />
-    </mat-form-field>
-  </ng-container>
 
-  <div  fxLayout="row" fxLayoutAlign="space-between center" class="oneline-input-width">
+
+  <div fxFill fxLayout="row" fxLayoutAlign="space-around center">
+    <ng-container>
+      <mat-form-field  appearance="outline" class="row-input-width">
+        <mat-label>項目</mat-label>
+        <input matInput formControlName="ItemName" required />
+      </mat-form-field>
+    </ng-container>
   <ng-container>
     <mat-form-field  appearance="outline" class="row-input-width">
       <mat-label>數量</mat-label>

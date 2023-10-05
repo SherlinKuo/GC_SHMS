@@ -32,7 +32,8 @@ export interface ResForm01Init extends responseCommon{
     schoolList: selectList[],
     vendorList: selectList[],
     statusList: selectList[],
-    payMethodList: selectList[]
+    payMethodList: selectList[],
+    orderIDList: selectList[]
   }
 }
 
