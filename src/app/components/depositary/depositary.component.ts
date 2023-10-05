@@ -9,6 +9,7 @@ import { AsyncPipe } from '@angular/common';
 import { MatTableDataSource } from '@angular/material/table';
 import { ConfirmComponent } from '../dialog/confirm/confirm.component';
 import { EditDepositaryComponent } from '../dialog/edit-depositary/edit-depositary.component';
+import { CreateDepositaryComponent } from '../dialog/create-depositary/create-depositary.component';
 @Component({
   selector: 'app-depositary',
   templateUrl: './depositary.component.html',
@@ -34,7 +35,7 @@ export class DepositaryComponent extends Base implements OnInit {
   vendorList!: selectList[];
   statusList!: selectList[];
   // filteredOptions?: Observable<selectList[]>;
-  Columns = [  'edit', 'VendorStore',  'MainSchool',  'PayMethod', 'ItemState',  'CallDate',  'InHouseDate',  'DeliveryDate',  'ItemName',  'ItemAmount',  'ItemPrice',  'ItemDetail'];
+  Columns = [  'edit', 'VendorStoreDisplay',  'MainSchoolDisplay',  'PayMethodDisplay', 'ItemStateDisplay',  'CallDate',  'InHouseDate',  'DeliveryDate',  'ItemName',  'ItemAmount',  'ItemPrice',  'ItemDetail'];
   displayedColumns = this.Columns;
 
   TableDataList = new MatTableDataSource<DepositaryDataTable>([]);
@@ -113,7 +114,6 @@ export class DepositaryComponent extends Base implements OnInit {
     const confirm = this.dialog.open(EditDepositaryComponent,
       {
         data: ele,
-
         disableClose: true
       });
     confirm.afterClosed().subscribe(
@@ -126,7 +126,7 @@ export class DepositaryComponent extends Base implements OnInit {
 
   // 新增
   CreateData(){
-    const confirm = this.dialog.open(EditDepositaryComponent,
+    const confirm = this.dialog.open(CreateDepositaryComponent,
       {
         disableClose: true
       });

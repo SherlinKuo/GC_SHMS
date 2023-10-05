@@ -19,6 +19,7 @@ import { ConfigService } from './service/config.service';
 import { DepositaryComponent } from './components/depositary/depositary.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { EditDepositaryComponent } from './components/dialog/edit-depositary/edit-depositary.component';
+import { CreateDepositaryComponent } from './components/dialog/create-depositary/create-depositary.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { EditDepositaryComponent } from './components/dialog/edit-depositary/edi
     ConfirmComponent,
     DepositaryComponent,
     EditDepositaryComponent,
+    CreateDepositaryComponent,
 
   ],
   imports: [

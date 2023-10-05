@@ -4,6 +4,7 @@ $GC_color:(
   "white-green": rgb(185, 203, 197),
   "grey-white": rgb(242, 242, 242),
   "dark-text": rgb(11, 68, 40),
+  "light-text": rgb(242, 242, 242),
 
 );
 
@@ -17,9 +18,23 @@ $GC_color:(
 }
 
 .btn-add{
-  background-color: map.get($GC_color, "white-green");
-  color:map.get($GC_color, "dark-text"); ;
+  color: map.get($GC_color, "light-text");
+  background-color:map.get($GC_color, "dark-text"); ;
 }
+
+.oneline-input-width{
+  width: 800px;
+}
+
+.row-input-width{
+  width: 200px;
+}
+
+.page-title{
+  font-size: 34px;
+    line-height: 58px;
+}
+
 
 ::ng-deep .mat-form-field-should-float .mat-form-field-label{
   font-size: 22px;

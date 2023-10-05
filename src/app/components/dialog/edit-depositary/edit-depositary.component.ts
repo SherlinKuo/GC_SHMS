@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
-import { selectList } from 'src/app/model/data-tpye/data-tpye.module';
+import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
+import { DepositaryDataTable, selectList } from 'src/app/model/data-tpye/data-tpye.module';
 import { DataService } from 'src/app/service/data.service';
 import { Base } from '../../base';
 import { DialogRef } from '@angular/cdk/dialog';
@@ -9,14 +9,13 @@ import { DialogRef } from '@angular/cdk/dialog';
 @Component({
   selector: 'app-edit-depositary',
   templateUrl: './edit-depositary.component.html',
-  styleUrls: ['./edit-depositary.component.scss']
+  styleUrls: ['./edit-depositary.component.scss'],
 })
-export class EditDepositaryComponent  implements OnInit {
-
+export class EditDepositaryComponent implements OnInit {
   dataForm = new FormGroup({
-    CallDate: new FormControl(new Date().toISOString().slice(0,10)),
-    InHouseDate: new FormControl(new Date().toISOString().slice(0,10)),
-    DeliveryDate: new FormControl(new Date().toISOString().slice(0,10)),
+    CallDate: new FormControl(new Date().toISOString().slice(0, 10)),
+    InHouseDate: new FormControl(new Date().toISOString().slice(0, 10)),
+    DeliveryDate: new FormControl(new Date().toISOString().slice(0, 10)),
     ItemName: new FormControl(),
     ItemState: new FormControl(),
     ItemAmount: new FormControl(),
@@ -33,9 +32,20 @@ export class EditDepositaryComponent  implements OnInit {
   statusList!: selectList[];
   payMethodList!: selectList[];
 
-  constructor(public dialogRef: DialogRef<EditDepositaryComponent>, private dataService: DataService) { }
+  itemData?: DepositaryDataTable;
+  constructor(
+    public dialogRef: DialogRef<EditDepositaryComponent>,
+    private dataService: DataService,
+    @Inject(MAT_DIALOG_DATA) public data: DepositaryDataTable
+  ) {
+    this.itemData = data;
+  }
 
   ngOnInit(): void {
+    if(this.itemData){
+      this.setData();
+    }
+
     this.getInit();
   }
 
@@ -43,23 +53,24 @@ export class EditDepositaryComponent  implements OnInit {
     const filterValue = value.toLowerCase();
     console.log(value);
 
-    return this.vendorList.filter(option => option.display.includes(filterValue));
+    return this.vendorList.filter((option) =>
+      option.display.includes(filterValue)
+    );
   }
 
-  getInit() {
-    this.dataService.getForm01Init().subscribe(
-      data => {
-        this.schoolList = data.Data.schoolList;
-        this.vendorList = data.Data.vendorList;
-        this.statusList = data.Data.statusList;
-        this.payMethodList = data.Data.payMethodList;
-        // this.filteredOptions = this.dataForm.controls['VendorStore'].valueChanges.pipe(
-        //   startWith(''),
-        //   map(value => this._filter(value || '')),
-        // );
+  setData(){
+    Object.keys(this.itemData!).forEach((key) => {
+      if (this.dataForm.get(key)) {
+        this.dataForm.get(key)!.setValue(this.itemData![key as keyof DepositaryDataTable]);
       }
-    )
+    });
   }
-
-
+  getInit() {
+    this.dataService.getForm01Init().subscribe((data) => {
+      this.schoolList = data.Data.schoolList;
+      this.vendorList = data.Data.vendorList;
+      this.statusList = data.Data.statusList;
+      this.payMethodList = data.Data.payMethodList;
+    });
+  }
 }

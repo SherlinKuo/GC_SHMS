@@ -88,22 +88,22 @@
 
   <mat-table  [dataSource]="TableDataList" class="mat-elevation-z8 ">
 
-    <ng-container matColumnDef="VendorStore">
+    <ng-container matColumnDef="VendorStoreDisplay">
       <mat-header-cell *matHeaderCellDef> 廠商 </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.VendorStore}} </mat-cell>
+      <mat-cell *matCellDef="let element"> {{element.VendorStoreDisplay}} </mat-cell>
     </ng-container>
 
 
-    <ng-container matColumnDef="MainSchool">
+    <ng-container matColumnDef="MainSchoolDisplay">
       <mat-header-cell *matHeaderCellDef> 學校 </mat-header-cell>
       <!-- <mat-cell *matCellDef="let element"> {{element.date | date:'YYYY/MM/dd c'}} </mat-cell> -->
-      <mat-cell *matCellDef="let element"> {{element.MainSchool}} </mat-cell>
+      <mat-cell *matCellDef="let element"> {{element.MainSchoolDisplay}} </mat-cell>
     </ng-container>
 
 
-    <ng-container matColumnDef="ItemState">
+    <ng-container matColumnDef="ItemStateDisplay">
       <mat-header-cell *matHeaderCellDef> 狀態 </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.ItemState}} </mat-cell>
+      <mat-cell *matCellDef="let element"> {{element.ItemStateDisplay}} </mat-cell>
     </ng-container>
 
 
@@ -137,9 +137,9 @@
       <mat-header-cell *matHeaderCellDef> 規格 </mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.ItemDetail}} </mat-cell>
     </ng-container>
-    <ng-container matColumnDef="PayMethod">
+    <ng-container matColumnDef="PayMethodDisplay">
       <mat-header-cell *matHeaderCellDef> 付款方式 </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.PayMethod}} </mat-cell>
+      <mat-cell *matCellDef="let element"> {{element.PayMethodDisplay}} </mat-cell>
     </ng-container>
 
 

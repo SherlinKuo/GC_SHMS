@@ -44,8 +44,11 @@ export interface ResDepositary extends responseCommon{
 
 export interface DepositaryDataTable {
   VendorStore: string;
+  VendorStoreDisplay: string;
   MainSchool: string;
+  MainSchoolDisplay: string;
   ItemState: string;
+  ItemStateDisplay: string;
   CallDate: string;
   InHouseDate: string;
   DeliveryDate: string;
@@ -55,6 +58,7 @@ export interface DepositaryDataTable {
   ItemPrice: string;
   ItemDetail: string;
   PayMethod: string;
+  PayMethodDisplay: string;
 }
 
 
