@@ -10,6 +10,6 @@ export class MenuService {
   constructor(private http: HttpClient) { }
 
   getMenu(){
-    return this.http.get<MenuJson[]>("../assets/Json/menu.json")
+    return this.http.get<MenuJson[]>("assets/Json/menu.json")
   }
 }

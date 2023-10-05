@@ -18,6 +18,6 @@ export class DataService {
 
   // 進貨單
   getForm01Init() {
-    return this.http.get<ResForm01Init>('../../assets/Json/Form01Init.json');
+    return this.http.get<ResForm01Init>('assets/Json/Form01Init.json');
   }
 }
