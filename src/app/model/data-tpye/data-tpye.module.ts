@@ -26,10 +26,35 @@ export interface selectList {
   value: string
 }
 
-
+// depositary initData
 export interface ResForm01Init extends responseCommon{
   Data: {
     schoolList: selectList[],
-    vendorList: selectList[]
+    vendorList: selectList[],
+    statusList: selectList[],
+    payMethodList: selectList[]
   }
 }
+
+export interface ResDepositary extends responseCommon{
+  Data : {
+    DataTable: DepositaryDataTable[];
+  }
+}
+
+export interface DepositaryDataTable {
+  VendorStore: string;
+  MainSchool: string;
+  ItemState: string;
+  CallDate: string;
+  InHouseDate: string;
+  DeliveryDate: string;
+  ItemName: string;
+  ItemAmount: string;
+  ItemUnit: string;
+  ItemPrice: string;
+  ItemDetail: string;
+  PayMethod: string;
+}
+
+

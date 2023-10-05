@@ -1,6 +1,7 @@
 import { DepositaryComponent } from './components/depositary/depositary.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EditDepositaryComponent } from './components/dialog/edit-depositary/edit-depositary.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: "depositary",
     component: DepositaryComponent
+  },
+  {
+    path: "EditDepositary",
+    component: EditDepositaryComponent
   },
   {
     path: "**",

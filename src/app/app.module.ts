@@ -18,6 +18,7 @@ import { DatePipe } from '@angular/common';
 import { ConfigService } from './service/config.service';
 import { DepositaryComponent } from './components/depositary/depositary.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { EditDepositaryComponent } from './components/dialog/edit-depositary/edit-depositary.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     DialogComponent,
     ConfirmComponent,
     DepositaryComponent,
+    EditDepositaryComponent,
 
   ],
   imports: [

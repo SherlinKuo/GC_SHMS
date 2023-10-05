@@ -3,6 +3,7 @@ $GC_color:(
   "light-green": rgb(84, 130, 120),
   "white-green": rgb(185, 203, 197),
   "grey-white": rgb(242, 242, 242),
+  "dark-text": rgb(11, 68, 40),
 
 );
 
@@ -13,6 +14,11 @@ $GC_color:(
 .btn-check{
   background-color: map.get($GC_color, "deep-green");
   color:map.get($GC_color, "grey-white"); ;
+}
+
+.btn-add{
+  background-color: map.get($GC_color, "white-green");
+  color:map.get($GC_color, "dark-text"); ;
 }
 
 ::ng-deep .mat-form-field-should-float .mat-form-field-label{

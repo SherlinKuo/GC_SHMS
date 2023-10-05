@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { join } from '@fireflysemantics/join';
-import { ResForm01Init } from '../model/data-tpye/data-tpye.module';
+import { ResDepositary, ResForm01Init } from '../model/data-tpye/data-tpye.module';
 import { ConfigService } from './config.service';
 
 @Injectable({
@@ -16,8 +16,13 @@ export class DataService {
   });
   constructor(private http: HttpClient, private config: ConfigService) {}
 
-  // 進貨單
+  // 進貨單 -init
   getForm01Init() {
     return this.http.get<ResForm01Init>('assets/Json/Form01Init.json');
+  }
+
+  // 進貨單 - 查詢
+  QueryDepositary() {
+    return this.http.get<ResDepositary>('assets/Json/depositaryTable.json');
   }
 }

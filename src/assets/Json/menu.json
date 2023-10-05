@@ -3,8 +3,12 @@
     "title": "倉管系統",
     "menuList": [
       {
-        "name": "庫存總覽",
+        "name": "新增進貨單",
         "path": "depositary"
+      },
+      {
+        "name": "編輯進貨單",
+        "path": "EditDepositary"
       }
 
     ]
