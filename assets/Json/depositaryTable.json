@@ -1,0 +1,39 @@
+{
+  "Success": true,
+  "Message": null,
+  "DataTime": "2023-10-05T16:33:33.6664249+08:00",
+  "Data": {
+    "DataTable": [
+      {
+        "ItemID": "ereirejidduus001",
+        "VendorStore": "士林-蔡一零",
+        "MainSchool": "瑠公國中",
+        "ItemState": "到貨",
+        "CallDate": "20230923",
+        "InHouseDate": "20230930",
+        "DeliveryDate": "20231001",
+        "ItemName": "雞翅",
+        "ItemAmount": "16",
+        "ItemUnit": "包",
+        "ItemPrice": "50",
+        "ItemDetail": "10支一包",
+        "PayMethod": "零用金"
+      },
+      {
+        "ItemID": "ereirejidduus002",
+        "VendorStore": "士林市場-周絕倫",
+        "MainSchool": "滾",
+        "ItemState": "到貨",
+        "CallDate": "20230922",
+        "InHouseDate": "20230923",
+        "DeliveryDate": "20231001",
+        "ItemName": "雞軟骨",
+        "ItemAmount": "1",
+        "ItemUnit": "包",
+        "ItemPrice": "100",
+        "ItemDetail": "",
+        "PayMethod": "零用金"
+      }
+    ]
+  }
+}

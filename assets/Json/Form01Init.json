@@ -1,35 +1,55 @@
 {
-    "Success": true,
-    "Message": null,
-    "DataTime": "2023-09-23T00:06:17.6901235+08:00",
-    "Data": {
-        "schoolList": [
-            {
-                "display": "張阿姨",
-                "value": "01"
-            },
-            {
-                "display": "瑠公國中",
-                "value": "02"
-            },
-            {
-                "display": "滾",
-                "value": "03"
-            },
-            {
-                "display": "小V姐",
-                "value": "04"
-            }
-        ],
-        "vendorList": [
-            {
-                "display": "士林市場 - 祥山",
-                "value": "01"
-            },
-            {
-              "display": "士林市場 - 豪大大",
-              "value": "02"
-          }
-        ]
+  "Success": true,
+  "Message": null,
+  "DataTime": "2023-09-23T00:06:17.6901235+08:00",
+  "Data": {
+    "schoolList": [
+      {
+        "display": "張阿姨",
+        "value": "01"
+      },
+      {
+        "display": "瑠公國中",
+        "value": "02"
+      },
+      {
+        "display": "滾",
+        "value": "03"
+      },
+      {
+        "display": "小V姐",
+        "value": "04"
+      }
+    ],
+    "vendorList": [
+      {
+        "display": "士林市場 - 祥山",
+        "value": "01"
+      },
+      {
+        "display": "士林市場 - 豪大大",
+        "value": "02"
+      }
+    ],
+    "statusList": [
+      {
+        "display": "到貨",
+        "value": "01"
+      },
+      {
+        "display": "已叫貨",
+        "value": "02"
+      }
+    ],
+    "payMethodList": [
+      {
+          "display": "零用金",
+          "value": "01"
+      },
+      {
+        "display": "轉帳",
+        "value": "02"
     }
+  ]
+  }
 }
