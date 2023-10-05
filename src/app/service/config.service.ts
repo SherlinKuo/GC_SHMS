@@ -14,7 +14,7 @@ export class ConfigService {
     }
 
     load(){
-    return this.http.get("../../assets/Json/APIConfig.json").toPromise().then(
+    return this.http.get("assets/Json/APIConfig.json").toPromise().then(
       data => {
         console.log("data");
         this._config = data;
