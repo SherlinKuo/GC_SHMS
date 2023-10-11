@@ -1,0 +1,101 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <p class="page-title">商品資訊調整</p>
+</div>
+<div fxLayout="row" class="content">
+  <div class="item-data-list">
+    <mat-list role="list">
+      <div mat-subheader>
+        <p class="list-header">商品清單</p>
+      </div>
+      <mat-list-item role="listitem" *ngFor="let item of itemList" (click)="test(item.value)"
+        [ngClass]="{'list-select': selectItem == item.value}">{{item.display}}</mat-list-item>
+    </mat-list>
+  </div>
+
+
+  <div class="data-table" *ngIf="TableDataList.data.length != 0">
+
+    <mat-table [dataSource]="TableDataList" class="mat-elevation-z8 ">
+
+      <ng-container matColumnDef="itemName" >
+        <mat-header-cell *matHeaderCellDef style="max-width: 220px;"> 商品細項 </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="max-width: 220px;">
+          <span *ngIf="element.id !== editId">{{element.itemName}}</span>
+          <mat-form-field *ngIf="element.id === editId">
+            <input matInput [(ngModel)]="element.itemName">
+          </mat-form-field>
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="ItemDetailAmount">
+        <mat-header-cell *matHeaderCellDef style="max-width: 80px;"> 規格數量 </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="max-width: 80px;">
+          <span *ngIf="element.id !== editId">{{element.ItemDetailAmount}}</span>
+          <mat-form-field *ngIf="element.id === editId">
+            <input matInput [(ngModel)]="element.ItemDetailAmount">
+          </mat-form-field></mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="ItemDetailUnit" >
+        <mat-header-cell *matHeaderCellDef style="max-width: 80px;"> 規格單位 </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="max-width: 80px;">
+          <span *ngIf="element.id !== editId">{{element.ItemDetailUnit}}</span>
+          <mat-form-field *ngIf="element.id === editId">
+            <input matInput [(ngModel)]="element.ItemDetailUnit">
+          </mat-form-field></mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="ItemAmount">
+        <mat-header-cell *matHeaderCellDef style="max-width: 80px;"> 數量 </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="max-width: 80px;">
+          <span *ngIf="element.id !== editId">{{element.ItemAmount}}</span>
+          <mat-form-field *ngIf="element.id === editId">
+            <input matInput [(ngModel)]="element.ItemAmount">
+          </mat-form-field>
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="ItemUnit">
+        <mat-header-cell *matHeaderCellDef style="max-width: 80px;"> 單位 </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="max-width: 80px;">
+          <span *ngIf="element.id !== editId">{{element.ItemUnit}}</span>
+          <mat-form-field *ngIf="element.id === editId">
+            <input matInput [(ngModel)]="element.ItemUnit">
+          </mat-form-field> </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="RealItemAmount">
+        <mat-header-cell *matHeaderCellDef style="max-width: 80px;"> 規格數量 </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="max-width: 80px;">
+          <span *ngIf="element.id !== editId">{{element.RealItemAmount}}</span>
+          <mat-form-field *ngIf="element.id === editId">
+            <input matInput [(ngModel)]="element.RealItemAmount">
+          </mat-form-field></mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="RealItemDetailUnit">
+        <mat-header-cell *matHeaderCellDef style="max-width: 80px;"> 規格單位 </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="max-width: 80px;">
+          <span *ngIf="element.id !== editId">{{element.RealItemDetailUnit}}</span>
+          <mat-form-field *ngIf="element.id === editId">
+            <input matInput [(ngModel)]="element.RealItemDetailUnit">
+          </mat-form-field></mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="RealItemDetail">
+        <mat-header-cell *matHeaderCellDef style="max-width: 80px;"> 規格備註 </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="max-width: 80px;">
+          <span *ngIf="element.id !== editId">{{element.RealItemDetail}}</span>
+          <mat-form-field *ngIf="element.id === editId">
+            <input matInput [(ngModel)]="element.RealItemDetail">
+          </mat-form-field></mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="edit">
+        <mat-header-cell *matHeaderCellDef style="max-width: 80px;"> </mat-header-cell>
+        <mat-cell *matCellDef="let element" style="max-width: 80px;"> <button mat-icon-button
+            (click)="editMode(element.id)"><mat-icon>edit</mat-icon></button></mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+
+</div>

@@ -1,0 +1,43 @@
+@use "sass:map";
+@import "../../GC.scss";
+
+.content {
+  margin: 8px 20px;
+}
+
+.item-data-list {
+  height: auto;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.list-select {
+  background-color: map.get($GC_color, "deep-green");
+  color: map.get($GC_color, "light-text");
+}
+
+.list-header {
+  margin: auto;
+}
+
+.mat-subheader {
+  border-bottom: 1px solid map.get($GC_color, "deep-green");
+}
+
+.data-table{
+  width: 80%;
+  padding: 20px;
+  margin: auto;
+}
+
+
+.mat-row {
+  height: auto;
+}
+
+.mat-cell, .mat-header-cell {
+  // padding: 8px 8px 8px 0;
+  padding: 0px 8px;
+}

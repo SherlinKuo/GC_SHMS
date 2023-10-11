@@ -6,6 +6,7 @@
     "DataTable": [
       {
         "ItemID": "ereirejidduus001",
+        "OrderID": "C0001",
         "VendorStore": "01",
         "VendorStoreDisplay": "士林-蔡一零",
         "MainSchool": "02",
@@ -21,10 +22,13 @@
         "ItemPrice": "50",
         "ItemDetail": "10支一包",
         "PayMethod": "01",
-        "PayMethodDisplay": "零用金"
+        "PayMethodDisplay": "零用金",
+        "ItemUnitAmount" : "2",
+        "ItemUnitUnit": "隻"
       },
       {
         "ItemID": "ereirejidduus002",
+        "OrderID": "C22338",
         "VendorStore": "02",
         "VendorStoreDisplay": "士林市場-周絕倫",
         "MainSchool": "03",
@@ -40,7 +44,9 @@
         "ItemPrice": "100",
         "ItemDetail": "",
         "PayMethod": "01",
-        "PayMethodDisplay": "零用金"
+        "PayMethodDisplay": "零用金",
+        "ItemUnitAmount" : "",
+        "ItemUnitUnit": ""
       }
     ]
   }

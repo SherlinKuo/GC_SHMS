@@ -132,13 +132,27 @@
   </ng-container>
 </div>
 
-
+<div fxFill fxLayout="row" fxLayoutAlign="space-around center">
   <ng-container>
-    <mat-form-field  appearance="outline" class="oneline-input-width">
+    <mat-form-field  appearance="outline" class="row-input-width">
+      <mat-label>每{{dataForm.controls['ItemUnit'].value ? dataForm.controls['ItemUnit'].value : '單位'}}內容數量</mat-label>
+      <input matInput formControlName="ItemUnitAmount" required />
+    </mat-form-field>
+  </ng-container>
+  <ng-container>
+    <mat-form-field  appearance="outline" class="row-input-width">
+      <mat-label>每{{dataForm.controls['ItemUnit'].value ? dataForm.controls['ItemUnit'].value : '單位'}}內容單位</mat-label>
+      <input matInput formControlName="ItemUnitUnit" required />
+    </mat-form-field>
+  </ng-container>
+  <ng-container>
+    <mat-form-field  appearance="outline" class="row-input-width">
       <mat-label>輸入規格</mat-label>
       <textarea matInput formControlName="ItemDetail" rows="1"></textarea>
     </mat-form-field>
   </ng-container>
+</div>
+
 
 
 

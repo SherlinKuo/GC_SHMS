@@ -44,6 +44,7 @@ export interface ResDepositary extends responseCommon{
 }
 
 export interface DepositaryDataTable {
+  OrderID: string;
   VendorStore: string;
   VendorStoreDisplay: string;
   MainSchool: string;
@@ -60,6 +61,34 @@ export interface DepositaryDataTable {
   ItemDetail: string;
   PayMethod: string;
   PayMethodDisplay: string;
+  ItemUnitAmount: string;
+  ItemUnitUnit: string;
 }
 
 
+// itemDataList
+export interface ItemDataInitRes extends responseCommon{
+  Data: {
+    itemList: selectList[];
+  }
+}
+
+export interface ResItemData extends responseCommon{
+  Data : {
+    itemData: ItemDataTable[];
+  }
+}
+
+export interface ItemDataTable {
+  id: string;
+  itemName: string;
+  ItemDetailAmount: string;
+  ItemDetailUnit: string;
+  ItemAmount: string;
+  ItemUnit: string;
+  RealItemDetailAmount: string;
+  RealItemDetailUnit: string;
+  RealItemDetail: string;
+  RealItemAmount: string;
+  RealItemUnit: string;
+}

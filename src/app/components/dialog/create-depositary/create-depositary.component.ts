@@ -28,6 +28,8 @@ export class CreateDepositaryComponent implements OnInit {
     VendorStore: new FormControl(),
     PayMethod: new FormControl(),
     OrderID: new FormControl(),
+    ItemUnitAmount: new FormControl(),
+    ItemUnitUnit: new FormControl(),
   });
 
   schoolList?: selectList[];

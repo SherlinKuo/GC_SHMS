@@ -36,9 +36,11 @@ export class DepositaryComponent extends Base implements OnInit {
   schoolList?: selectList[];
   vendorList!: selectList[];
   statusList!: selectList[];
+  orderIDList!: selectList[];
   // filteredOptions?: Observable<selectList[]>;
   Columns = [
     'edit',
+    'OrderID',
     'VendorStoreDisplay',
     'MainSchoolDisplay',
     'PayMethodDisplay',
@@ -80,7 +82,7 @@ export class DepositaryComponent extends Base implements OnInit {
       this.schoolList = data.Data.schoolList;
       this.vendorList = data.Data.vendorList;
       this.statusList = data.Data.statusList;
-
+      this.orderIDList = data.Data.orderIDList;
       // this.filteredOptions = this.dataForm.controls['VendorStore'].valueChanges.pipe(
       //   startWith(''),
       //   map(value => this._filter(value || '')),

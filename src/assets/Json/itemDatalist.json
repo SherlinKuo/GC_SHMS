@@ -1,0 +1,21 @@
+{
+    "Success": true,
+    "Message": null,
+    "DataTime": "2023-10-05T16:33:33.6664249+08:00",
+    "Data": {
+        "itemList": [
+            {
+                "display": "可樂滷雞腿",
+                "value": "01"
+            },
+            {
+                "display": "古早味菜埔蛋",
+                "value": "02"
+            },
+            {
+                "display": "空心菜炒牛肉",
+                "value": "03"
+            }
+        ]
+    }
+}

@@ -25,6 +25,8 @@ export class EditDepositaryComponent implements OnInit {
     MainSchool: new FormControl(),
     VendorStore: new FormControl(),
     PayMethod: new FormControl(),
+    ItemUnitAmount: new FormControl(),
+    ItemUnitUnit: new FormControl(),
   });
 
   schoolList?: selectList[];
