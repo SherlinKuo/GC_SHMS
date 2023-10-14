@@ -1,0 +1,87 @@
+{
+  "Success": true,
+  "Message": null,
+  "DataTime": "2023-10-05T16:33:33.6664249+08:00",
+  "Data": {
+    "itemData": [
+      {
+        "id": "01",
+        "itemName": "雞翅",
+        "ItemDetailAmount": "10",
+        "ItemDetailUnit" : "隻",
+        "ItemAmount": "16",
+        "ItemUnit": "組",
+        "RealItemDetailAmount": "10",
+        "RealItemDetailUnit": "隻",
+        "RealItemDetail": "",
+        "RealItemAmount": "16",
+        "RealItemUnit": "包"
+      },
+      {
+        "id": "02",
+        "itemName": "可樂",
+        "ItemDetailAmount": "200",
+        "ItemDetailUnit" : "ml",
+        "ItemAmount": "16",
+        "ItemUnit": "組",
+        "RealItemDetailAmount": "250",
+        "RealItemDetailUnit": "ml",
+        "RealItemDetail": "",
+        "RealItemAmount": "16",
+        "RealItemUnit": "罐"
+      },
+      {
+        "id": "03",
+        "itemName": "水",
+        "ItemDetailAmount": "200",
+        "ItemDetailUnit" : "ml",
+        "ItemAmount": "0",
+        "ItemUnit": "組",
+        "RealItemDetailAmount": "0",
+        "RealItemDetailUnit": "自備",
+        "RealItemDetail": "",
+        "RealItemAmount": "0",
+        "RealItemUnit": "罐"
+      },
+      {
+        "id": "04",
+        "itemName": "雅媽吉日式香菇風味醬油",
+        "ItemDetailAmount": "50",
+        "ItemDetailUnit" : "ml",
+        "ItemAmount": "16",
+        "ItemUnit": "組",
+        "RealItemDetailAmount": "500",
+        "RealItemDetailUnit": "ml",
+        "RealItemDetail": "",
+        "RealItemAmount": "2",
+        "RealItemUnit": "罐"
+      },
+      {
+        "id": "05",
+        "itemName": "太白粉(水)",
+        "ItemDetailAmount": "5",
+        "ItemDetailUnit" : "g",
+        "ItemAmount": "16",
+        "ItemUnit": "組",
+        "RealItemDetailAmount": "0",
+        "RealItemDetailUnit": "",
+        "RealItemDetail": "單獨包裝-備註貼紙",
+        "RealItemAmount": "16",
+        "RealItemUnit": "罐"
+      },
+      {
+        "id": "06",
+        "itemName": "番茄醬",
+        "ItemDetailAmount": "2",
+        "ItemDetailUnit" : "T",
+        "ItemAmount": "16",
+        "ItemUnit": "組",
+        "RealItemDetailAmount": "500",
+        "RealItemDetailUnit": "ml",
+        "RealItemDetail": "軟罐",
+        "RealItemAmount": "2",
+        "RealItemUnit": "罐"
+      }
+    ]
+  }
+}
