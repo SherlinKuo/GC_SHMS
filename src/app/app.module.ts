@@ -21,6 +21,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { EditDepositaryComponent } from './components/dialog/edit-depositary/edit-depositary.component';
 import { CreateDepositaryComponent } from './components/dialog/create-depositary/create-depositary.component';
 import { ItemDataUpdateComponent } from './components/item-data-update/item-data-update.component';
+import { OrderDepositaryComponent } from './components/order-depositary/order-depositary.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ItemDataUpdateComponent } from './components/item-data-update/item-data
     EditDepositaryComponent,
     CreateDepositaryComponent,
     ItemDataUpdateComponent,
+    OrderDepositaryComponent,
 
   ],
   imports: [

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EditDepositaryComponent } from './components/dialog/edit-depositary/edit-depositary.component';
 import { ItemDataUpdateComponent } from './components/item-data-update/item-data-update.component';
+import { OrderDepositaryComponent } from './components/order-depositary/order-depositary.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: "itemDataUpdate",
     component: ItemDataUpdateComponent
+  },
+  {
+    path: "orderDepositary",
+    component: OrderDepositaryComponent
   },
   {
     path: "**",

@@ -26,7 +26,7 @@ export interface selectList {
   value: string
 }
 
-// depositary initData
+//#region  depositary initData
 export interface ResForm01Init extends responseCommon{
   Data: {
     schoolList: selectList[],
@@ -64,9 +64,9 @@ export interface DepositaryDataTable {
   ItemUnitAmount: string;
   ItemUnitUnit: string;
 }
+//#endregion
 
-
-// itemDataList
+//#region   itemDataList
 export interface ItemDataInitRes extends responseCommon{
   Data: {
     itemList: selectList[];
@@ -92,3 +92,26 @@ export interface ItemDataTable {
   RealItemAmount: string;
   RealItemUnit: string;
 }
+
+//#endregion
+
+//#region  order-deposiary
+export interface ResOderDepositary extends responseCommon{
+  Data : {
+    DataTable: OderDepositaryDataTable[];
+  }
+}
+
+export interface OderDepositaryDataTable {
+  OrderID: string;
+  MainSchoolDisplay: string;
+  TheacherName: string;
+  TempTheacherName: string;
+  OrderDate: string;
+  DeliveryDate: string;
+  phoneCall: string;
+  DeliveryAmount: string;
+  DeliveryNot: string;
+}
+
+//#endregion

@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { join } from '@fireflysemantics/join';
-import { ItemDataInitRes, ResDepositary, ResForm01Init, ResItemData } from '../model/data-tpye/data-tpye.module';
+import { ItemDataInitRes, ResDepositary, ResForm01Init, ResItemData, ResOderDepositary } from '../model/data-tpye/data-tpye.module';
 import { ConfigService } from './config.service';
 
 @Injectable({
@@ -35,4 +35,14 @@ export class DataService {
   getitemData(){
     return this.http.get<ResItemData>('assets/Json/itemData.json');
   }
+
+  //#region 訂貨單
+  getOrderInit() {
+    return this.http.get<ResForm01Init>('assets/Json/orderInit.json');
+  }
+
+  QueryOrderDepositary() {
+    return this.http.get<ResOderDepositary>('assets/Json/orderDepositaryTable.json');
+  }
+  //#endregion
 }
