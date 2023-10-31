@@ -17,6 +17,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatListModule} from '@angular/material/list';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatStepperModule} from '@angular/material/stepper';
 export const TW_FORMATS = {
   parse: {
     dateInput: 'YYYY/MM/DD'
@@ -44,7 +45,8 @@ const shareModule = [
   MatProgressSpinnerModule,
   MatAutocompleteModule,
   MatListModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatStepperModule
 ]
 
 @NgModule({

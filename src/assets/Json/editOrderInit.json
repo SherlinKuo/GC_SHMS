@@ -1,0 +1,49 @@
+{
+  "Success": true,
+  "Message": null,
+  "DataTime": "2023-09-23T00:06:17.6901235+08:00",
+  "Data": {
+    "payMethodList": [
+      {
+        "display": "零用金",
+        "value": "01"
+      },
+      {
+        "display": "轉帳",
+        "value": "02"
+      }
+    ],
+    "invoiceFormatList": [
+      {
+        "display": "電子發票",
+        "value": "01"
+      },
+      {
+        "display": "各班收據",
+        "value": "02"
+      },
+      {
+        "display": "總收據",
+        "value": "03"
+      }
+    ],
+    "schoolList": [
+      {
+        "display": "張阿姨",
+        "value": "01"
+      },
+      {
+        "display": "瑠公國中",
+        "value": "02"
+      },
+      {
+        "display": "滾",
+        "value": "03"
+      },
+      {
+        "display": "小V姐",
+        "value": "04"
+      }
+    ]
+  }
+}

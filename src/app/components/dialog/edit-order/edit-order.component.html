@@ -1,0 +1,160 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <p class="page-title">訂單編號 - {{itemData.OrderID}}</p>
+</div>
+
+<mat-stepper linear="true" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <ng-template matStepLabel>訂單資訊</ng-template>
+    <form fxLayoutGap="15px" fxLayout="column" fxLayoutAlign="center center" class="container"
+      [formGroup]="firstFormGroup">
+      <div fxLayout="row warp" fxFill fxLayoutAlign="space-around center">
+        <ng-container>
+          <mat-form-field appearance="outline" class="row-input-width">
+            <mat-label>訂購學校</mat-label>
+            <mat-select formControlName="MainSchool" required>
+              <mat-option *ngFor="let item of schoolList" [value]="item.value">
+                {{ item.display }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </ng-container>
+        <ng-container>
+          <mat-form-field appearance="outline" class="row-input-width">
+            <mat-label>學校統編</mat-label>
+            <input matInput formControlName="OrderTeacher" required />
+          </mat-form-field>
+        </ng-container>
+        <ng-container>
+          <mat-form-field appearance="outline" class="row-input-width">
+            <mat-label>訂購老師</mat-label>
+            <input matInput formControlName="OrderTeacher" required />
+          </mat-form-field>
+        </ng-container>
+
+        <ng-container>
+          <mat-form-field appearance="outline" class="row-input-width">
+            <mat-label>代收件老師</mat-label>
+            <input matInput formControlName="TempTeacher" required />
+          </mat-form-field>
+        </ng-container>
+        <ng-container>
+          <mat-form-field appearance="outline" class="row-input-width">
+            <mat-label>聯絡電話</mat-label>
+            <input matInput formControlName="callPhone" required />
+          </mat-form-field>
+        </ng-container>
+        <ng-container>
+          <mat-form-field appearance="outline" class="row-input-width">
+            <mat-label>訂單日期</mat-label>
+            <input matInput [matDatepicker]="picker1" formControlName="OderDate" required />
+            <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+        </ng-container>
+
+        <ng-container>
+          <mat-form-field appearance="outline" class="row-input-width">
+            <mat-label>送貨日期</mat-label>
+            <input matInput [matDatepicker]="picker2" formControlName="DeliveryDate" required />
+            <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+        </ng-container>
+        <ng-container>
+          <mat-form-field appearance="outline" class="row-input-width">
+            <mat-label>送貨地點</mat-label>
+            <input matInput formControlName="OrderTeacher" required />
+          </mat-form-field>
+        </ng-container>
+
+        <ng-container>
+          <mat-form-field>
+            <mat-label>授課日期</mat-label>
+            <mat-date-range-input [rangePicker]="pickerR">
+              <input formControlName="TDateStart" matStartDate placeholder="開始日期">
+              <input formControlName="TDateEnd" matEndDate placeholder="結束日期">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matIconSuffix [for]="pickerR"></mat-datepicker-toggle>
+            <mat-date-range-picker #pickerR></mat-date-range-picker>
+          </mat-form-field>
+
+        </ng-container>
+
+        <ng-container>
+          <mat-form-field appearance="outline" class="row-input-width">
+            <mat-label>開立規格</mat-label>
+            <mat-select formControlName="MainSchool" required>
+              <mat-option *ngFor="let item of schoolList" [value]="item.value">
+                {{ item.display }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </ng-container>
+
+
+        <ng-container>
+          <mat-form-field appearance="outline" class="row-input-width">
+            <mat-label>運送方式</mat-label>
+            <mat-select formControlName="MainSchool" required>
+              <mat-option *ngFor="let item of schoolList" [value]="item.value">
+                {{ item.display }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </ng-container>
+
+        <ng-container>
+          <mat-form-field appearance="outline" class="row-input-width">
+            <mat-label>運送金額</mat-label>
+            <input matInput formControlName="OrderTeacher" required />
+          </mat-form-field>
+        </ng-container>
+        <ng-container>
+          <mat-form-field appearance="outline" class="row-input-width">
+            <mat-label>運送備註</mat-label>
+            <input matInput formControlName="OrderTeacher" required />
+          </mat-form-field>
+        </ng-container>
+
+        <ng-container>
+          <mat-form-field appearance="outline" class="row-input-width">
+            <mat-label>付款方式</mat-label>
+            <mat-select formControlName="MainSchool" required>
+              <mat-option *ngFor="let item of schoolList" [value]="item.value">
+                {{ item.display }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </ng-container>
+
+        <ng-container>
+          <mat-form-field appearance="outline" class="row-input-width">
+            <mat-label>運送方式</mat-label>
+            <mat-select formControlName="MainSchool" required>
+              <mat-option *ngFor="let item of schoolList" [value]="item.value">
+                {{ item.display }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </ng-container>
+
+        <ng-container>
+          <mat-form-field appearance="outline" class="row-input-width">
+            <mat-label>相關備註</mat-label>
+            <input matInput formControlName="OrderTeacher" required />
+          </mat-form-field>
+        </ng-container>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step label="訂單商品">
+
+  </mat-step>
+</mat-stepper>
+<div fxLayout="row" fxLayoutAlign="center center">
+
+  <button mat-raised-button class="btn-check">確定</button>
+  <button mat-button mat-dialog-close>取消</button>
+</div>

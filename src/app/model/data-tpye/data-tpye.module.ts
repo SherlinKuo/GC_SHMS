@@ -115,3 +115,14 @@ export interface OderDepositaryDataTable {
 }
 
 //#endregion
+
+//#region edit-order-depositary
+export interface EditOrderInitRes extends responseCommon{
+  Data: {
+    payMethodList: selectList[];
+    invoiceFormatList: selectList[];
+    schoolList: selectList[];
+  }
+}
+
+//#endregion

@@ -5,6 +5,7 @@ import { OderDepositaryDataTable, selectList } from 'src/app/model/data-tpye/dat
 import { MatTableDataSource } from '@angular/material/table';
 import { DataService } from 'src/app/service/data.service';
 import { MatDialog } from '@angular/material/dialog';
+import { EditOrderComponent } from '../dialog/edit-order/edit-order.component';
 
 @Component({
   selector: 'app-order-depositary',
@@ -64,6 +65,13 @@ export class OrderDepositaryComponent extends Base implements OnInit {
 
   editConfirm(ele: OderDepositaryDataTable){
 
+    const confirm = this.dialog.open(EditOrderComponent, {
+      data: ele,
+      disableClose: true,
+    });
+    confirm.afterClosed().subscribe((data) => {
+      console.log(data);
+    });
   }
 
   getInit() {

@@ -22,6 +22,7 @@ import { EditDepositaryComponent } from './components/dialog/edit-depositary/edi
 import { CreateDepositaryComponent } from './components/dialog/create-depositary/create-depositary.component';
 import { ItemDataUpdateComponent } from './components/item-data-update/item-data-update.component';
 import { OrderDepositaryComponent } from './components/order-depositary/order-depositary.component';
+import { EditOrderComponent } from './components/dialog/edit-order/edit-order.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { OrderDepositaryComponent } from './components/order-depositary/order-de
     CreateDepositaryComponent,
     ItemDataUpdateComponent,
     OrderDepositaryComponent,
+    EditOrderComponent,
 
   ],
   imports: [

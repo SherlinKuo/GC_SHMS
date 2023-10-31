@@ -40,6 +40,9 @@ $GC_color:(
   font-size: 22px;
   font-weight: 900;
 }
+::ng-deep .mat-form-field-type-mat-date-range-input .mat-form-field-infix{
+  display:contents ;
+}
 
 
 ::ng-deep .ng-select .ng-select-container{
