@@ -122,7 +122,37 @@ export interface EditOrderInitRes extends responseCommon{
     payMethodList: selectList[];
     invoiceFormatList: selectList[];
     schoolList: selectList[];
+    DeliveryMethodList: selectList[];
   }
 }
+
+
+export interface EditOrderItemRes extends responseCommon{
+  Data: EditOrderItem;
+}
+
+export interface EditOrderItem {
+    OderDate: string;
+    DeliveryDate: string;
+    TDateStart: string;
+    TDateEnd: string;
+    MainSchool: string;
+    MainSchoolDisplay: string;
+    OrderTeacher: string;
+    TempTeacher: string;
+    callPhone: string;
+    DeliveryAddress: string;
+    SchooltaxID: string;
+    Specification: string;
+    SpecificationDisplay: string;
+    DeliveryMethod: string;
+    DeliveryMethodDisplay: string;
+    FareAmount: number;
+    FareNote: string;
+    PayMethod: string;
+    PayMethodDisplay: string;
+    OtherNote: string;
+}
+
 
 //#endregion

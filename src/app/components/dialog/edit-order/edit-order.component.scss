@@ -1,0 +1,18 @@
+@use "sass:map";
+@import "../../../GC.scss";
+
+.close-icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.close-icon:hover{
+  transition: all 1s;
+  font-size: 36px;
+  width: 36px;
+  height: 36px;
+  font-weight: 900;
+}

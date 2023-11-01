@@ -30,6 +30,21 @@ $GC_color:(
   width: 200px;
 }
 
+::ng-deep .date-input-width{
+ .mat-form-field-infix{
+    width: 145px !important;
+  }
+
+}
+
+::ng-deep .date-range-input-width{
+  .mat-form-field-infix{
+     width: 180px !important;
+   }
+
+ }
+
+
 .page-title{
   font-size: 34px;
   line-height: 58px;
@@ -40,9 +55,10 @@ $GC_color:(
   font-size: 22px;
   font-weight: 900;
 }
-::ng-deep .mat-form-field-type-mat-date-range-input .mat-form-field-infix{
-  display:contents ;
-}
+// ::ng-deep .mat-form-field-type-mat-date-range-input .mat-form-field-infix{
+//   display:contents ;
+//   padding: 1em 0 1em 0;
+// }
 
 
 ::ng-deep .ng-select .ng-select-container{

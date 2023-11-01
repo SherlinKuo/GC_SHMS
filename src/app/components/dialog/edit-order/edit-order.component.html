@@ -1,13 +1,15 @@
-<div fxLayout="column" fxLayoutAlign="center center">
+
+<div fxLayout="column" fxLayoutAlign="center center" style="position: relative">
   <p class="page-title">訂單編號 - {{itemData.OrderID}}</p>
+  <mat-icon mat-dialog-close class="close-icon">close</mat-icon>
 </div>
 
-<mat-stepper linear="true" #stepper>
+<mat-stepper linear=true #stepper>
   <mat-step [stepControl]="firstFormGroup">
     <ng-template matStepLabel>訂單資訊</ng-template>
     <form fxLayoutGap="15px" fxLayout="column" fxLayoutAlign="center center" class="container"
       [formGroup]="firstFormGroup">
-      <div fxLayout="row warp" fxFill fxLayoutAlign="space-around center">
+      <div fxLayout="row warp" fxFill fxLayoutAlign="start center" fxLayoutGap="25px">
         <ng-container>
           <mat-form-field appearance="outline" class="row-input-width">
             <mat-label>訂購學校</mat-label>
@@ -21,7 +23,7 @@
         <ng-container>
           <mat-form-field appearance="outline" class="row-input-width">
             <mat-label>學校統編</mat-label>
-            <input matInput formControlName="OrderTeacher" required />
+            <input matInput formControlName="SchooltaxID" />
           </mat-form-field>
         </ng-container>
         <ng-container>
@@ -44,7 +46,7 @@
           </mat-form-field>
         </ng-container>
         <ng-container>
-          <mat-form-field appearance="outline" class="row-input-width">
+          <mat-form-field appearance="outline" class="date-input-width">
             <mat-label>訂單日期</mat-label>
             <input matInput [matDatepicker]="picker1" formControlName="OderDate" required />
             <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
@@ -54,7 +56,7 @@
         </ng-container>
 
         <ng-container>
-          <mat-form-field appearance="outline" class="row-input-width">
+          <mat-form-field appearance="outline" class="date-input-width">
             <mat-label>送貨日期</mat-label>
             <input matInput [matDatepicker]="picker2" formControlName="DeliveryDate" required />
             <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
@@ -65,28 +67,37 @@
         <ng-container>
           <mat-form-field appearance="outline" class="row-input-width">
             <mat-label>送貨地點</mat-label>
-            <input matInput formControlName="OrderTeacher" required />
+            <input matInput formControlName="DeliveryAddress" required />
           </mat-form-field>
         </ng-container>
 
         <ng-container>
-          <mat-form-field>
+          <mat-form-field appearance="outline" class="date-range-input-width">
             <mat-label>授課日期</mat-label>
             <mat-date-range-input [rangePicker]="pickerR">
               <input formControlName="TDateStart" matStartDate placeholder="開始日期">
               <input formControlName="TDateEnd" matEndDate placeholder="結束日期">
             </mat-date-range-input>
-            <mat-datepicker-toggle matIconSuffix [for]="pickerR"></mat-datepicker-toggle>
+            <mat-datepicker-toggle matSuffix [for]="pickerR"></mat-datepicker-toggle>
             <mat-date-range-picker #pickerR></mat-date-range-picker>
           </mat-form-field>
-
         </ng-container>
+      </div>
+    </form>
 
+    <div fxLayout="row" fxLayoutAlign="end center">
+      <button mat-raised-button class="btn-check" matStepperNext>下一步</button>
+    </div>
+  </mat-step>
+  <mat-step label="運費資訊" [stepControl]="secondFormGroup">
+    <form fxLayoutGap="15px" fxLayout="column" fxLayoutAlign="center center" class="container"
+      [formGroup]="secondFormGroup">
+      <div fxLayout="row warp" fxFill fxLayoutAlign="start center" fxLayoutGap="25px">
         <ng-container>
           <mat-form-field appearance="outline" class="row-input-width">
             <mat-label>開立規格</mat-label>
-            <mat-select formControlName="MainSchool" required>
-              <mat-option *ngFor="let item of schoolList" [value]="item.value">
+            <mat-select formControlName="invoiceFormat" required>
+              <mat-option *ngFor="let item of invoiceFormatList" [value]="item.value">
                 {{ item.display }}
               </mat-option>
             </mat-select>
@@ -97,8 +108,8 @@
         <ng-container>
           <mat-form-field appearance="outline" class="row-input-width">
             <mat-label>運送方式</mat-label>
-            <mat-select formControlName="MainSchool" required>
-              <mat-option *ngFor="let item of schoolList" [value]="item.value">
+            <mat-select formControlName="DeliveryMethod" required>
+              <mat-option *ngFor="let item of DeliveryMethodList" [value]="item.value">
                 {{ item.display }}
               </mat-option>
             </mat-select>
@@ -108,31 +119,20 @@
         <ng-container>
           <mat-form-field appearance="outline" class="row-input-width">
             <mat-label>運送金額</mat-label>
-            <input matInput formControlName="OrderTeacher" required />
+            <input matInput formControlName="FareAmount" required />
           </mat-form-field>
         </ng-container>
         <ng-container>
           <mat-form-field appearance="outline" class="row-input-width">
             <mat-label>運送備註</mat-label>
-            <input matInput formControlName="OrderTeacher" required />
+            <input matInput formControlName="FareNote" required />
           </mat-form-field>
         </ng-container>
 
         <ng-container>
           <mat-form-field appearance="outline" class="row-input-width">
             <mat-label>付款方式</mat-label>
-            <mat-select formControlName="MainSchool" required>
-              <mat-option *ngFor="let item of schoolList" [value]="item.value">
-                {{ item.display }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        </ng-container>
-
-        <ng-container>
-          <mat-form-field appearance="outline" class="row-input-width">
-            <mat-label>運送方式</mat-label>
-            <mat-select formControlName="MainSchool" required>
+            <mat-select formControlName="PayMethod" required>
               <mat-option *ngFor="let item of schoolList" [value]="item.value">
                 {{ item.display }}
               </mat-option>
@@ -143,18 +143,26 @@
         <ng-container>
           <mat-form-field appearance="outline" class="row-input-width">
             <mat-label>相關備註</mat-label>
-            <input matInput formControlName="OrderTeacher" required />
+            <input matInput formControlName="OtherNote" />
           </mat-form-field>
         </ng-container>
       </div>
     </form>
+
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+
+      <button mat-button  matStepperPrevious>上一步</button>
+      <button mat-raised-button class="btn-check" matStepperNext>下一步</button>
+    </div>
+
   </mat-step>
   <mat-step label="訂單商品">
 
+    <div fxLayout="row" fxLayoutAlign="center center">
+
+      <button mat-button  matStepperPrevious>上一步</button>
+      <button mat-raised-button class="btn-check" matStepperNext>下一步</button>
+    </div>
+
   </mat-step>
 </mat-stepper>
-<div fxLayout="row" fxLayoutAlign="center center">
-
-  <button mat-raised-button class="btn-check">確定</button>
-  <button mat-button mat-dialog-close>取消</button>
-</div>

@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { join } from '@fireflysemantics/join';
-import { EditOrderInitRes, ItemDataInitRes, ResDepositary, ResForm01Init, ResItemData, ResOderDepositary } from '../model/data-tpye/data-tpye.module';
+import { EditOrderInitRes, EditOrderItemRes, ItemDataInitRes, ResDepositary, ResForm01Init, ResItemData, ResOderDepositary } from '../model/data-tpye/data-tpye.module';
 import { ConfigService } from './config.service';
 
 @Injectable({
@@ -47,6 +47,9 @@ export class DataService {
 
   editOrderInit(){
     return this.http.get<EditOrderInitRes>('assets/Json/editOrderInit.json');
+  }
+  editOrderItem(){
+    return this.http.get<EditOrderItemRes>('assets/Json/editOrderItem.json');
   }
   //#endregion
 }
