@@ -1,0 +1,27 @@
+{
+  "Success": true,
+  "Message": null,
+  "DataTime": "2023-10-05T16:33:33.6664249+08:00",
+  "Data": {
+    "OderDate" : "20230923",
+    "DeliveryDate" : "20231001",
+    "TDateStart" : "20230926",
+    "TDateEnd": "20230928",
+    "MainSchool": "02",
+    "MainSchoolDisplay": "瑠公國中",
+    "OrderTeacher": "陳紫玫",
+    "TempTeacher": "利貞儀",
+    "callPhone": "2726-1481#208",
+    "DeliveryAddress": "2樓學務處找利貞儀老師拿鑰匙，送3樓烹飪教室",
+    "SchooltaxID": "",
+    "invoiceFormat": "02",
+    "invoiceFormatDisplay": "各班收據",
+    "DeliveryMethod" : "01",
+    "DeliveryMethodDisplay": "即時物流",
+    "FareAmount": 660,
+    "FareNote": "兩次運費平均以人數均攤",
+    "PayMethod": "01",
+    "PayMethodDisplay": "匯款至(郵局)",
+    "OtherNote": ""
+  }
+}
